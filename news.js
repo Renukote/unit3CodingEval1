@@ -18,12 +18,15 @@ function appendArticle( data ) {
         let desc = document.createElement('div');
         desc.innerHTML = article.description;
 
+        let cont = document.createElement('div');
+        cont.innerHTML = article.content;
+
         let link = document.createElement('a');
         link.href = article.url;  
         link.innerText = 'click here to view the full article';  
         console.log( link ) 
 
-        div.append( img, headline, desc, link );
+        div.append( img, headline, desc, cont, link );
         container.append( div );
         // div.onclick = function () { read( article  ) };
     })

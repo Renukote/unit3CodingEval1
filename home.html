@@ -17,6 +17,10 @@
 </head>
 <body>
     
+    <form id = 'form' onsubmit = 'search(event)'>
+        <input type = 'text' placeholder = 'search' id = 'query'>
+    </form>
+
     <div id = 'headlines'></div>
 </body>
 </html>
@@ -56,6 +60,25 @@
             container.append( div );
             div.onclick = function () { read( article  ) };
         })
+    }
+
+
+    function search(e){
+        e.preventDefault();
+        
+        window.location.href = 'C:/Users/LENOVO/renu/masai/unit3/codingEval1/search.html';
+
+        let sQuery = JSON.parse(localStorage.getItem('searchQuery'))
+
+        if( !sQuery ) {
+            localStorage.setItem('searchQuery',JSON.stringify([]));
+        }
+        else {
+            let form = document.getElementById('form');
+
+            sQuery.push(form.query.value);
+            localStorage.setItem('searchQuery',JSON.stringify(sQuery));
+        }
     }
 </script>
 
