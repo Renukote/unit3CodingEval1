@@ -39,7 +39,7 @@ function appendRes( data )
 
         div.append( img, headline, desc );
         container.append( div );
-        div.onclick = function () { read( article  ) };
+        // div.onclick = function () { read( article  ) };
     })
 }
 

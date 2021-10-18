@@ -3,7 +3,7 @@
 
 
         function read( data ) {
-            window.location.href = 'C:/Users/LENOVO/renu/masai/unit3/codingEval1/news.html';
+            window.location.href = 'news.html';
             
 
             let article = JSON.parse(localStorage.getItem('article'));
